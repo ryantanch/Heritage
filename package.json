@@ -1,5 +1,5 @@
 {
-  "name": "LECXE-Heritage",
+  "name": "Heritage",
   "version": "1.0.0",
   "description": "COMP30022 IT Project",
   "main": "index.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryantanch/LECXE-Heritage.git"
+    "url": "git+https://github.com/leyiao/Heritage.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ryantanch/LECXE-Heritage/issues"
+    "url": "https://github.com/leyiao/Heritage/issues"
   },
-  "homepage": "https://github.com/ryantanch/LECXE-Heritage#readme",
+  "homepage": "https://github.com/leyiao/Heritage#readme",
   "dependencies": {
     "@google-cloud/storage": "^3.3.1",
     "axios": "^0.19.0",
