@@ -30,7 +30,7 @@ app.use("/api", Form_routes);
 
 //------------------ port -----------------
 
-const PORT = process.env.PORT || 6000;
+var PORT = process.env.PORT || 6000;
 
 app.listen(PORT,() => {
 
