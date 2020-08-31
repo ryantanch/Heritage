@@ -34,7 +34,7 @@ var PORT = process.env.PORT || 6000;
 
 app.listen(PORT, () => {
     console.log('Server listening on port ' + PORT);
-});
+});  
 
 if (process.env.NODE_ENV === 'production') {
 	// Exprees will serve up production assets
@@ -49,5 +49,8 @@ if (process.env.NODE_ENV === 'production') {
 
 
 
-
+  const gcs = require('@google-cloud/storage')({
+	projectId: 'my-project-heritage',
+	credentials: JSON.parse(process.env.GOOGLE_CREDENTIALS)
+  });
 
