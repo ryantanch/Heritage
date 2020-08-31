@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const proxy = require('http-proxy-middleware')
 const app = express();
 //---------------- Allow Cross Origin ----------------
 
@@ -30,16 +31,12 @@ app.use("/api", Form_routes);
 
 //------------------ port -----------------
 
-var PORT = process.env.PORT || 6000;
 
-app.listen(PORT, () => {
-    console.log('Server listening on port ' + PORT);
-});  
 
 if (process.env.NODE_ENV === 'production') {
 	// Exprees will serve up production assets
 	app.use(express.static('client/build'));
-  
+	app.use(proxy(['/api' ], { target: 'http://localhost:3000' }));
 	// Express serve up index.html file if it doesn't recognize route
 	const path = require('path');
 	app.get('*', (req, res) => {
@@ -49,4 +46,10 @@ if (process.env.NODE_ENV === 'production') {
 
 
 
+
+  var PORT = process.env.PORT || 6000;
+
+  app.listen(PORT, () => {
+	  console.log('Server listening on port ' + PORT);
+  });  
 
