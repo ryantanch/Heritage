@@ -29,6 +29,11 @@ class Home extends Component {
   }
 
   componentDidMount() {
+
+
+    axios.get('/api/users/test-call').then(resp=>{
+      console.log(resp)
+    })
     axios.get('/api/users').then(resp => {
       this.setState({ data: resp.data[0], DoneLoadedImage1: true });
     });

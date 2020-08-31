@@ -15,6 +15,10 @@ router.get("/users/:id", function(req, res) {
     });
 });
 
+router.get("/test-call",function(req,res){
+  res.send("Data reach")
+})
+
 //--------------- Query for all user -------------------------
 
 router.get("/users", function(req, res) {
