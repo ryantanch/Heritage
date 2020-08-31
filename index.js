@@ -32,10 +32,9 @@ app.use("/api", Form_routes);
 
 var PORT = process.env.PORT || 6000;
 
-app.listen(PORT,() => {
-
-	console.log("app listening on port 6000")
-})
+app.listen(PORT, () => {
+    console.log('Server listening on port ' + PORT);
+});
 
 if (process.env.NODE_ENV === 'production') {
 	// Exprees will serve up production assets
