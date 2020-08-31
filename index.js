@@ -49,8 +49,4 @@ if (process.env.NODE_ENV === 'production') {
 
 
 
-  const gcs = require('@google-cloud/storage')({
-	projectId: 'my-project-heritage',
-	credentials: JSON.parse(process.env.GOOGLE_CREDENTIALS)
-  });
 
